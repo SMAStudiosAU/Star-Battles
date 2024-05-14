@@ -16,6 +16,7 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+		
 	var currentRotation = $".".rotation
 	$".".rotation = currentRotation + ((playerRotation - currentRotation) * 0.1)
 	#$".".rotation = playerRotation
