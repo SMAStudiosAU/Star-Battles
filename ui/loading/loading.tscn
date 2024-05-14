@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://p3umew182wyh"]
+
+[ext_resource type="Theme" uid="uid://bka3nt6orr6a2" path="res://styles/uitheme.tres" id="1_wnfpx"]
+[ext_resource type="Script" path="res://ui/loading/loading.gd" id="2_67dgh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wnfpx")
+script = ExtResource("2_67dgh")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

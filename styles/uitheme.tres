@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bka3nt6orr6a2"]
+
+[ext_resource type="StyleBox" uid="uid://dkqqpq8hfrayj" path="res://styles/button/disabled.tres" id="1_wcqcl"]
+[ext_resource type="StyleBox" uid="uid://i8selr8k7fvy" path="res://styles/button/focus.tres" id="2_2v16t"]
+[ext_resource type="StyleBox" uid="uid://dfbf03lits5f3" path="res://styles/button/hover.tres" id="3_hw4jq"]
+[ext_resource type="StyleBox" uid="uid://wnad5vhh8867" path="res://styles/button/normal.tres" id="4_73ebl"]
+[ext_resource type="StyleBox" uid="uid://bsj5xyhu7o0k5" path="res://styles/button/pressed.tres" id="5_325y0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebpjq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iro6b"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[resource]
+Button/styles/disabled = ExtResource("1_wcqcl")
+Button/styles/focus = ExtResource("2_2v16t")
+Button/styles/hover = ExtResource("3_hw4jq")
+Button/styles/normal = ExtResource("4_73ebl")
+Button/styles/pressed = ExtResource("5_325y0")
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_ebpjq")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_iro6b")

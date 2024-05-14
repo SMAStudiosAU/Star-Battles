@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://ca3aa2gkqpxym"]
+
+[ext_resource type="Theme" uid="uid://bka3nt6orr6a2" path="res://styles/uitheme.tres" id="1_h54rr"]
+[ext_resource type="Script" path="res://ui/notsupported/notsupported.gd" id="2_mrwn4"]
+[ext_resource type="FontFile" uid="uid://bcijd1chg2axr" path="res://mdi.woff2" id="3_plktf"]
+[ext_resource type="StyleBox" uid="uid://bbueim6gjgvwp" path="res://styles/icnbutton/normal.tres" id="4_13cq7"]
+[ext_resource type="StyleBox" uid="uid://cbf2axqbnky0j" path="res://styles/icnbutton/hover.tres" id="5_at2ei"]
+[ext_resource type="StyleBox" uid="uid://c6opeyg0owd25" path="res://styles/icnbutton/pressed.tres" id="6_bav8l"]
+[ext_resource type="StyleBox" uid="uid://bppvy74i3fydy" path="res://styles/icnbutton/disabled.tres" id="7_x8ced"]
+[ext_resource type="StyleBox" uid="uid://dcaioctkwnpqn" path="res://styles/icnbutton/focus.tres" id="8_6lotn"]
+
+[node name="notsupported" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h54rr")
+script = ExtResource("2_mrwn4")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("3_plktf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("4_13cq7")
+theme_override_styles/hover = ExtResource("5_at2ei")
+theme_override_styles/pressed = ExtResource("6_bav8l")
+theme_override_styles/disabled = ExtResource("7_x8ced")
+theme_override_styles/focus = ExtResource("8_6lotn")
+text = "arrow_back"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Your system is not supported :("
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Requirements:
+At least i9-6900k
+At least RTX 4090 ti 32 gb
+At least 64gb ram
+At least Windows 11 or arch btw"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
