@@ -16,18 +16,14 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-		
-	var currentRotation = $".".rotation
-	$".".rotation = currentRotation + ((playerRotation - currentRotation) * 0.1)
-	#$".".rotation = playerRotation
 
 	if velocity.y > 0:
 		velocity = velocity.normalized() * speed
-		playerRotation = -100
+		$".".rotation = -100
 	elif velocity.y < 0:
 		velocity = velocity.normalized() * speed
-		playerRotation = 100
+		$".".rotation = 100
 	else:
-		playerRotation = 0
+		$".".rotation = 0
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)

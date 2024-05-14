@@ -1,18 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpe844ccu36ly"]
+[gd_scene load_steps=4 format=3 uid="uid://cpe844ccu36ly"]
 
 [ext_resource type="Script" path="res://scene/player.gd" id="1_lypbh"]
-[ext_resource type="Texture2D" uid="uid://dimwp58a7ky2c" path="res://assets/ship/ShipLeft.png" id="4_eksq1"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6mqb7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_eksq1")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://b5qdenv21qqah" path="res://assets/ship/ShipRight.png" id="2_46we4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f5yww"]
 size = Vector2(200, 200)
@@ -21,10 +10,9 @@ size = Vector2(200, 200)
 script = ExtResource("1_lypbh")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_6mqb7")
-frame_progress = 0.151999
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_f5yww")
+
+[node name="ShipRight" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_46we4")
