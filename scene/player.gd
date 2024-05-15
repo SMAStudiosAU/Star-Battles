@@ -19,10 +19,10 @@ func _process(delta):
 
 	if velocity.y > 0:
 		velocity = velocity.normalized() * speed
-		$".".rotation = -100
+		$".".rotation = -50
 	elif velocity.y < 0:
 		velocity = velocity.normalized() * speed
-		$".".rotation = 100
+		$".".rotation = 50
 	else:
 		$".".rotation = 0
 	position += velocity * delta
